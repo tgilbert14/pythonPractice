@@ -1,3 +1,5 @@
+# python basics - python part 1
+
 import calendar
 import math
 import random
@@ -35,7 +37,7 @@ print(type(color))
 
 
 # math
-print(math.pow(2,2))
+print(math.pow(2, 2))
 print(math.sqrt(49))
 
 # lists - stored in "[]"
@@ -53,8 +55,6 @@ child1_birth = ("Julia", "Banner Hospital", "Tucson", "AZ", "USA", "07-29-2019",
 child2_birth = ("SnoopDog", "Portland Hospital", "Portland", "OR", "USA", "03-15-1978", "12:47")
 print(f"{child1_birth[0]} was born on {child1_birth[5]} in {child1_birth[2]}, {child1_birth[3]}")
 print(f"{child2_birth[0]} was born on {child2_birth[5]} in {child2_birth[2]}, {child2_birth[3]}")
-
-
 
 
 # quit ##this is for coding in R studio to quit python env
