@@ -1,0 +1,1 @@
+EXECUTE sp_execute_external_script@language = N'R',@script = N'MyValue <- c(23, 26, 32)MyValue[1] <- 100MyValue[4] <- 96MyValue[5] <- MyValue[4]+100MyValue <- as.integer(MyValue)print(MyValue)print(typeof(MyValue))'

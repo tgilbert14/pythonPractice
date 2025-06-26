@@ -1,0 +1,1 @@
+EXECUTE sp_execute_external_script@language = N'R',@script = N'',@input_data_1 = N'SELECT CountryID, CountryName, Continent, Region, IsoNumericCodeFROM Application.Countries;'WITH RESULT SETS (([Country ID] int, [Country Name] nvarchar(60), [Continent] nvarchar(30), [Region] nvarchar(30),[IsoNumericCode] int))

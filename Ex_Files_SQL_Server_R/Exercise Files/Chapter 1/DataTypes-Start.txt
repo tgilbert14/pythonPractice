@@ -1,0 +1,34 @@
+-- R data type for text
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+print(typeof("Hello World"))
+'
+
+-- R data type for decimal values
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+print(typeof(10.5))
+'
+
+-- R data type for integer data
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+print(typeof(10))
+'
+
+-- convert double precision values to integer
+-- (10L)
+-- (as.integer(10))
+-- verify value with is.integer(10) or is.integer(10L)
+
+-- Floating point math with large and small values
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+print(2^-63 + 1 - 1)
+print((2^-63 + 1) - 1)
+print(2^-63 + (1 - 1))
+'

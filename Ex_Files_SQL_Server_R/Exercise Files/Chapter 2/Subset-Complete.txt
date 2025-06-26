@@ -1,0 +1,1 @@
+EXECUTE sp_execute_external_script@language = N'R',@script = N'OutputDataSet <- subset(InputDataSet, SupplierID == 1, )',@input_data_1 = N' SELECT StockItemName, SupplierID FROM Warehouse.StockItems; 'WITH RESULT SETS (([StockItemName] nvarchar(100), [SupplierID] int))

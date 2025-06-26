@@ -1,0 +1,1 @@
+EXECUTE sp_execute_external_script@language = N'R',@script = N'indexSample <- sample(1:nrow(InputDataSet), 5)OutputDataSet <- data.frame(InputDataSet[indexSample, ])',@input_data_1 = N'SELECT ColorName FROM Warehouse.Colors;'WITH RESULT SETS (([5 Random Colors] nvarchar(20)))

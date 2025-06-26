@@ -1,0 +1,12 @@
+-- Variables in T-SQL
+DECLARE @MyValue int;
+SET @MyValue = 23;
+SELECT @MyValue as Number;
+
+-- Variables in R
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+MyValue <- 23
+print(MyValue)
+'

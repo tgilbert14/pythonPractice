@@ -1,0 +1,6 @@
+-- Create a stored procedure
+CREATE PROCEDURE RandomColors	@Count intASEXECUTE sp_execute_external_script@language = N'R',@script = N'indexSample <- sample(1:nrow(InputDataSet), n)OutputDataSet <- data.frame(InputDataSet[indexSample, ])',@input_data_1 = N'SELECT ColorName FROM Warehouse.Colors;',@params = N' @n int',@n = @CountWITH RESULT SETS (([Colors] nvarchar(20)))
+
+
+-- Execute the stored procedure
+EXEC RandomColors @Count = 3

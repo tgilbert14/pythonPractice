@@ -1,0 +1,7 @@
+-- Convert Celsius to Fahrenheit
+
+EXEC sp_execute_external_script@language = N'R',@script = N'Celsius <- InputDataSet[,1]Fahrenheit <- (Celsius * 1.8) + 32OutputDataSet <- data.frame(Celsius, Fahrenheit)',@input_data_1 = N'SELECT Temperature FROM Warehouse.ColdRoomTemperatures;'WITH RESULT SETS (([Degrees C] decimal(10,2), [Degrees F] decimal(10,2)));
+
+
+-- Another approach does the same thing on a single line. Try:
+-- OutputDataSet <- data.frame(InputDataSet[,1], (InputDataSet[,1] * 1.8) + 32)

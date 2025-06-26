@@ -1,0 +1,1 @@
+-- View the dataSELECT ColorName FROM Warehouse.Colors;-- Write a script that returns random colorsEXECUTE sp_execute_external_script@language = N'R',@script = N'',@input_data_1 = N''

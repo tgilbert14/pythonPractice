@@ -1,0 +1,20 @@
+-- The R script template
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+
+'
+
+-- Print a single value to the SQL Server messages windowEXECUTE sp_execute_external_script@language = N'R',@script = N'print(10)'
+
+-- Perform math operationsEXECUTE sp_execute_external_script@language = N'R',@script = N'print(10+5)'
+
+-- Return numeric data as text with double quotesEXECUTE sp_execute_external_script@language = N'R',@script = N'print("10+5")'
+
+-- Print a range of valuesEXECUTE sp_execute_external_script@language = N'R',@script = N'print(10:100)'
+
+-- Combine multiple values to a vectorEXECUTE sp_execute_external_script@language = N'R',@script = N'print( c(10, 20, 30))'
+
+-- Add a range to a vectorEXECUTE sp_execute_external_script@language = N'R',@script = N'print( c(10, 20:30))'
+
+-- Vectors include a single data typeEXECUTE sp_execute_external_script@language = N'R',@script = N'print( c("10", 20:30))'

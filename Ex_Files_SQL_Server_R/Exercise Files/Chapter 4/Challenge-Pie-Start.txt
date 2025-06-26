@@ -1,0 +1,1 @@
+-- Percent of countries in each regionSELECT Region,    CAST(COUNT(CountryID) AS float)        / CAST((SELECT COUNT(CountryID) FROM Application.Countries) AS float)    AS PercentOfCountriesFROM Application.CountriesGROUP BY RegionORDER BY PercentOfCountries DESC;

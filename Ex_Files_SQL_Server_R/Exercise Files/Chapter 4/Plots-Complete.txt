@@ -1,0 +1,1 @@
+-- Create an X-Y PlotEXECUTE sp_execute_external_script@language = N'R',@script = N'XAxis <- c(1,2,3,4,5)YAxis <- c(20,96,36,84,35)MyData <- data.frame(XAxis, YAxis)png(filename = "../MyPlot.png")plot(MyData)dev.off()'
