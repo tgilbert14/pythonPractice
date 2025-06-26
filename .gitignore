@@ -1,7 +1,53 @@
-.Rproj.user
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# PyCharm project settings
+.idea/
+
+# Build and distribution
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Test outputs
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Logs
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Dotenv files
+*.env
+
+# RStudio / R-related files
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 
+# Example folders you want ignored
 Ex_Files_SQL_Server_Python/
 Ex_Files_SQL_Server_R/
