@@ -49,5 +49,5 @@ Thumbs.db
 .Ruserdata
 
 # Example folders you want ignored
-Ex_Files_SQL_Server_Python/
-Ex_Files_SQL_Server_R/
+#Ex_Files_SQL_Server_Python/
+#Ex_Files_SQL_Server_R/
