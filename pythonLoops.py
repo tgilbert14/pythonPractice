@@ -87,15 +87,16 @@ def reverse_string(s):
 
 print(reverse_string("abcdefg"))
 
+
 # palindromes
-def is_palindrome(str):
+def is_palindrome(str2: str):
     # one char means it is!
-    if len(str) <= 0:
+    if len(str2) <= 0:
         return True
     else:
         # checks if 1st and last char match and if the remaining string match
-        print(str[1:-1])
-        return str[0] == str[-1] and is_palindrome(str[1:-1])
+        print(str2[1:-1])
+        return str2[0] == str2[-1] and is_palindrome(str2[1:-1])
+
 
 print(is_palindrome("racecar"))
-

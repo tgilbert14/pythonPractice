@@ -145,5 +145,25 @@ Converted <- (Temp_C * 1.8) + 32
 Temp_F <- Converted
 OutputDataSet <- data.frame(Temp_C, Temp_F)
 ',
-@input_data_1 = N'SELECT Temperature FROM Warehouse.ColdRoomTemperatures'
+@input_data_1 = N'SELECT Top 10 Temperature FROM Warehouse.ColdRoomTemperatures'
 WITH RESULT SETS (([Temp Celsius] float, [Temp Fahrenheit] decimal(10,2)))
+
+
+--stored procedure and sample function -->
+SELECT colorname from Warehouse.Colors;
+
+--getting 5 random colors
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+# to pick random number from 1 to num of colors avaliable
+indexSample <- sample(1:nrow(InputDataSet), 5)
+# pick those colors in those positions
+OutputDataSet <- data.frame(InputDataSet[indexSample, ])
+',
+@input_data_1 = N'SELECT ColorName FROM Warehouse.Colors;'
+--name column(s)
+WITH RESULT SETS (([5 Random Colors] nvarchar(20)))
+
+-- now turn it into a stored procedure!
+-- see "UsingRinSQL_storedProcedure.sql"
