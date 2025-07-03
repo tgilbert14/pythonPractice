@@ -1,6 +1,6 @@
 # OOP
-class Dog():
-    def __init__(self, name, age):
+class Dog:
+    def __init__(self, name: str, age: float):
         self.name = name
         self.age = age
 
@@ -23,7 +23,7 @@ print(fido.age)
 
 # new class of 'Dog' can inherit
 class Husky(Dog):
-    def __init__(self, name, age, color="unknown", weight="unknown"):
+    def __init__(self, name, age, color: str = "unknown", weight: float = "NULL"):
         super().__init__(name, age)
         self.color = color
         self.weight = weight
@@ -36,7 +36,7 @@ class Husky(Dog):
 
 
 class Corgi(Dog):
-    def __init__(self, name, age, color="unknown", weight="unknown"):
+    def __init__(self, name, age, color: str = "unknown", weight: float = "NULL"):
         super().__init__(name, age)
         self.color = color
         self.weight = weight

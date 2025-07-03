@@ -38,7 +38,7 @@ print("recursive functions")
 # (n-1)! = (n-1)(n-2) ... 1
 # factorial ex.. 1!=1, 2!=2*1=2, 3!=3*2*1=6, etc.
 
-def factorial(n):
+def factorial(n: int):
     """Return the factorial positive integer n."""
     # 1 is base case and simple to calculate
     if n == 1:
@@ -56,7 +56,7 @@ print(factorial(7))
 # sum of 1st digit plus 2nd digit, etc... last digit
 # or sum of last digit plus next, etc...
 
-def sum_digits(n, depth=0):
+def sum_digits(n: int, depth=0):
     indent = "  " * depth  # For visual indentation
 
     if n < 10:
@@ -77,7 +77,7 @@ print(sum_digits(2505))
 
 
 # recursive string function..
-def reverse_string(s):
+def reverse_string(s: str):
     if len(s) <= 1:
         return f"{s} "
     else:
