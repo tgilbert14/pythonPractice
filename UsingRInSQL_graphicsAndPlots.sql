@@ -92,4 +92,5 @@ SELECT Region,
 FROM Application.Countries
 GROUP BY Region
 ORDER BY PercentOfCountries DESC;
+
 '
